@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import VueResource from 'vue-resource'
 import YmapPlugin from 'vue-yandex-maps'
-
+import BootstrapVue from 'bootstrap-vue'
 Vue.config.productionTip = false;
 
 const mapsSettings = {
@@ -11,8 +11,9 @@ const mapsSettings = {
   coordorder: 'latlong',
   version: '2.1'
 };
-Vue.use(YmapPlugin, mapsSettings);
 
+Vue.use(YmapPlugin, mapsSettings);
+Vue.use(BootstrapVue)
 Vue.use(VueResource);
 
 new Vue({
