@@ -14,13 +14,45 @@
                         <b-row>
                             <b-col>
                                 <b-button class="backButton">
-                                    <span> <img src="./assets/back.svg" width="13" height="22"> Назад </span>
+                                    <span> <img src="./assets/back.svg" width="13" height="22" class="backImg"> Назад </span>
                                 </b-button>
                             </b-col>
                         </b-row>
                         <b-row class="description">
                             <b-col>
                                 Вы можете предложить адреса, которые хотели бы соеденить велодорожкой.
+                            </b-col>
+                        </b-row>
+
+                        <b-row>
+                            <b-col>
+                                <input class="inputPoint" placeholder="Точка А" id="pointA">
+                            </b-col>
+                        </b-row>
+
+                        <b-row>
+                            <b-col>
+                                <input class="inputPoint" placeholder="Точка B" id="pointA">
+                            </b-col>
+                        </b-row>
+
+                        <b-row class="lineDone">
+                            <b-col>
+                                <img src="./assets/doneLine.svg" class="imgLine"> Готовые маршруты
+                            </b-col>
+                        </b-row>
+
+                        <b-row class="lineBuild">
+                            <b-col>
+                                <img src="./assets/buildLine.svg" class="imgLine"> Cтроящиеся маршруты
+                            </b-col>
+                        </b-row>
+
+                        <b-row>
+                            <b-col>
+                                <b-button class="sendButton">
+                                    Отправить
+                                </b-button>
                             </b-col>
                         </b-row>
                     </div>
@@ -97,13 +129,13 @@
         letter-spacing: 0.13em;
 
         color: #9381FF;
-        margin-top: 89px;
+        padding-top: 89px;
         margin-left: 60px;
         margin-right: 220px;
     }
 
     .backButton {
-        width: 83px;
+        width: 96px;
         height: 20px;
         font-family: Montserrat;
         font-style: normal;
@@ -140,6 +172,92 @@
         margin-left: 60px;
         margin-top: 46px;
         text-align: left;
+    }
+    .sendButton {
+        width: 151px;
+        height: 43px;
+        background: #9381FF;
+        border-radius: 35px;
+        border-color: #9381FF;
+        box-shadow: none;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        /* identical to box height */
+
+        text-align: center;
+        margin-top: 35px;
+        margin-left: 36px;
+        margin-right: 240px;
+        cursor: pointer;
+
+        color: #FFFFFF;
+    }
+
+    .inputPoint {
+        width: 330px;
+        height: 50px;
+        left: 60px;
+        top: 445px;
+
+        background: #FFFFFF;
+        border: 2px solid #9381FF;
+        box-sizing: border-box;
+        border-radius: 33px;
+        margin-left: 36px;
+        margin-right: 60px;
+        margin-top: 33px;
+
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: #9381FF;
+
+
+        padding-left: 34px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .backImg {
+        margin-right: 12px;
+    }
+    .inputPoint::placeholder {
+        color: #9381FF;
+    }
+
+    .lineDone {
+        margin-left: 50px;
+        margin-right: 169px;
+        margin-top: 78px;
+
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 20px;
+
+        color: #5F5696;
+    }
+    .imgLine {
+        padding-right: 26px;
+    }
+
+    .lineBuild {
+        margin-left: 49px;
+        margin-right: 132px;
+        margin-top: 17px;
+
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 20px;
+
+        color: #5F5696;
     }
 
 
