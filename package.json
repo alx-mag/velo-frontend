@@ -13,6 +13,7 @@
     "core-js": "^2.6.5",
     "font": "0.0.4",
     "get-google-fonts": "^1.2.0",
+    "google-fonts-webpack-plugin": "^0.4.4",
     "vue": "^2.6.10",
     "vue-resource": "^1.5.1",
     "vue-yandex-maps": "^0.8.13"

@@ -11,6 +11,18 @@
                                 RIDER
                             </b-col>
                         </b-row>
+                        <b-row>
+                            <b-col>
+                                <b-button class="backButton">
+                                    <span> <img src="./assets/back.svg" width="13" height="22"> Назад </span>
+                                </b-button>
+                            </b-col>
+                        </b-row>
+                        <b-row class="description">
+                            <b-col>
+                                Вы можете предложить адреса, которые хотели бы соеденить велодорожкой.
+                            </b-col>
+                        </b-row>
                     </div>
                 </b-col>
                 <b-col>
@@ -60,6 +72,7 @@
         height: 100%;
     }
     .menuColumn {
+
         width: 480px;
         height: 900px;
         left: 0px;
@@ -69,6 +82,11 @@
         box-shadow: 7px 4px 7px rgba(60, 51, 117, 0.15);
     }
     .logo {
+        width: 170px;
+        height: 99px;
+        left: 60px;
+        top: 89px;
+
         font-family: Montserrat;
         font-style: normal;
         font-weight: 900;
@@ -83,5 +101,49 @@
         margin-left: 60px;
         margin-right: 220px;
     }
+
+    .backButton {
+        width: 83px;
+        height: 20px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+
+        color: #9381FF;
+        background: #FFFFFF;
+
+        margin-top: 37px;
+        margin-left: 60px;
+        margin-right: 313px;
+        border-color: #FFFFFF;
+        box-shadow: #FFFFFF;
+        border: 0px;
+        cursor: pointer;
+
+    }
+    .description {
+        width: 315px;
+        height: 116px;
+        left: 60px;
+        top: 296px;
+
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+
+        color: #9381FF;
+
+        margin-left: 60px;
+        margin-top: 46px;
+        text-align: left;
+    }
+
+
+    @import url(http://fonts.googleapis.com/css?family=Montserrat:700,300,600,800,400&subset=cyrillic,cyrillic-ext,latin);
+
 
 </style>
