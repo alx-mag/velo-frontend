@@ -7,11 +7,19 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import {HTTP} from "./http-backend";
 
 export default {
   name: 'app',
   components: {
     HelloWorld
+  },
+  methods: {
+    getMessages() {
+      HTTP.get("test/entities?count=15").then(response => {
+
+      })
+    }
   }
 }
 </script>
