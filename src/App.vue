@@ -1,14 +1,15 @@
 <template>
     <div id="app" v-cloak>
-        <Map :coords="coords"/>
         <b-container fluid>
             <b-row>
-                <b-col cols="4">
+                <b-col cols="4" >
                     <div class="menuColumn">
-                        <b-row class="logo">
+                        <b-row>
                             <b-col>
-                                VELO <br>
-                                RIDER
+                                <div class="logo">
+                                    VELO <br>
+                                    RIDER
+                                </div>
                             </b-col>
                         </b-row>
                         <b-row>
@@ -18,9 +19,12 @@
                                 </b-button>
                             </b-col>
                         </b-row>
-                        <b-row class="description">
-                            <b-col>
-                                Вы можете предложить адреса, которые хотели бы соеденить велодорожкой.
+                        <b-row >
+                            <b-col >
+                                <div class="description">
+                                    Вы можете предложить адреса, которые хотели бы соеденить велодорожкой.
+                                </div>
+
                             </b-col>
                         </b-row>
 
@@ -36,15 +40,19 @@
                             </b-col>
                         </b-row>
 
-                        <b-row class="lineDone">
+                        <b-row>
                             <b-col>
-                                <img src="./assets/doneLine.svg" class="imgLine"> Готовые маршруты
+                                <div class="lineDone">
+                                    <img src="./assets/doneLine.svg" class="imgLine"> Готовые маршруты
+                                </div>
                             </b-col>
                         </b-row>
 
-                        <b-row class="lineBuild">
+                        <b-row>
                             <b-col>
-                                <img src="./assets/buildLine.svg" class="imgLine"> Cтроящиеся маршруты
+                                <div class="lineBuild">
+                                    <img src="./assets/buildLine.svg" class="imgLine"> Cтроящиеся маршруты
+                                </div>
                             </b-col>
                         </b-row>
 
@@ -57,7 +65,56 @@
                         </b-row>
                     </div>
                 </b-col>
-                <b-col>
+                <b-col cols="8">
+                    <div class="block">
+                        <b-row>
+                            <b-col cols="6">
+                                <div class="map">
+                                    <div class="topMap">
+                                        <img src="./assets/map.svg">
+                                    </div>
+                                    <div class="bottomMap">
+
+                                    </div>
+                                </div>
+                            </b-col>
+                            <b-col cols="6">
+                                <div class="map">
+                                    <div class="topMap">
+                                        <img src="./assets/map.svg">
+                                    </div>
+                                    <div class="bottomMap">
+
+                                    </div>
+                                </div>
+                            </b-col>
+                        </b-row>
+
+                        <b-row>
+                            <b-col cols="6">
+                                <div class="map">
+                                    <div class="topMap">
+                                        <img src="./assets/map.svg" width="100%" height="100%">
+                                    </div>
+                                    <div class="bottomMap">
+
+                                    </div>
+                                </div>
+                            </b-col>
+                            <b-col cols="6">
+                                <div class="map">
+                                    <div class="topMap">
+                                        <img src="./assets/map.svg" >
+                                    </div>
+                                    <div class="bottomMap">
+
+                                    </div>
+                                </div>
+                            </b-col>
+                        </b-row>
+                    </div>
+
+
 
                 </b-col>
 
@@ -86,6 +143,9 @@
 
 <style>
 
+    body {
+        background-color: #F5F6F7;
+    }
     #app {
         font-family: 'Avenir', Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
@@ -96,8 +156,10 @@
     }
 
     #app {
-        width: 1000px;
-        height: 600px;
+        width: 100%;
+        height: 100%;
+        background-color: #F5F6F7;
+
     }
 
     .ymap-container {
@@ -106,7 +168,7 @@
     .menuColumn {
 
         width: 480px;
-        height: 900px;
+        height: 100%;
         left: 0px;
         top: 0px;
 
@@ -132,10 +194,11 @@
         padding-top: 89px;
         margin-left: 60px;
         margin-right: 220px;
+        margin-bottom: 70px;
     }
 
-    .backButton {
-        width: 96px;
+    .backButton, .backButton.btn, .backButton.btn-secondary:not(:disabled):not(.disabled).active, .backButton.btn-secondary:not(:disabled):not(.disabled):active, .backButton.show>.btn-secondary.dropdown-toggle, .backButton.btn:hover,.backButton.btn:active, .backButton.btn:focus {
+        text-transform: none;
         height: 20px;
         font-family: Montserrat;
         font-style: normal;
@@ -146,13 +209,17 @@
         color: #9381FF;
         background: #FFFFFF;
 
-        margin-top: 37px;
+        margin-top: 50px;
         margin-left: 60px;
         margin-right: 313px;
         border-color: #FFFFFF;
-        box-shadow: #FFFFFF;
-        border: 0px;
+
+        box-shadow: none;
+        outline: none;
+        border: 0;
+        background: transparent;
         cursor: pointer;
+
 
     }
     .description {
@@ -173,7 +240,7 @@
         margin-top: 46px;
         text-align: left;
     }
-    .sendButton {
+    .sendButton, .sendButton.btn, .sendButton.btn-secondary:not(:disabled):not(.disabled).active, .sendButton.btn-secondary:not(:disabled):not(.disabled):active, .sendButton.show>.btn-secondary.dropdown-toggle, .sendButton.btn:hover,.sendButton.btn:active, .sendButton.btn:focus {
         width: 151px;
         height: 43px;
         background: #9381FF;
@@ -189,12 +256,14 @@
 
         text-align: center;
         margin-top: 35px;
-        margin-left: 36px;
+        margin-left: 45px;
         margin-right: 240px;
         cursor: pointer;
 
         color: #FFFFFF;
     }
+
+
 
     .inputPoint {
         width: 330px;
@@ -260,6 +329,30 @@
         color: #5F5696;
     }
 
+    .map {
+        width: 420px;
+        height: 335px;
+        border-radius: 6px;
+        margin-left: 60px;
+        margin-top: 100px;
+        margin-right: 14px;
+        margin-bottom: 100px;
+    }
+
+    .topMap {
+        width: 420px;
+        height: 262px;
+        border-radius: 6px;
+    }
+    .bottomMap {
+        width: 420px;
+        height: 73px;
+        background-color: #FFFFFF;
+        border-radius: 6px;
+    }
+    .block {
+        margin-left: 60px;
+    }
 
     @import url(http://fonts.googleapis.com/css?family=Montserrat:700,300,600,800,400&subset=cyrillic,cyrillic-ext,latin);
 

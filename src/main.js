@@ -3,6 +3,7 @@ import App from './App.vue'
 import VueResource from 'vue-resource'
 import YmapPlugin from 'vue-yandex-maps'
 import BootstrapVue from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
 Vue.config.productionTip = false;
 
 const mapsSettings = {
@@ -13,7 +14,7 @@ const mapsSettings = {
 };
 
 Vue.use(YmapPlugin, mapsSettings);
-Vue.use(BootstrapVue)
+Vue.use(BootstrapVue);
 Vue.use(VueResource);
 
 new Vue({
