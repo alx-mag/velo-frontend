@@ -154,7 +154,7 @@
     margin: 0px;
 }
 #YMapsID {
-    width: 1400px;
+    width: 1700px;
     height: 900px;
 }
 #YMapsCode {

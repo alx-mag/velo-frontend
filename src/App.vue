@@ -30,6 +30,19 @@
 
                         <b-row>
                             <b-col>
+                                <input class="inputPoint" placeholder="Введите имя" id="name">
+                            </b-col>
+                        </b-row>
+
+                        <b-row>
+                            <b-col>
+                                <input class="inputPoint" placeholder="Введите почту" id="email">
+                            </b-col>
+                        </b-row>
+
+
+                        <b-row>
+                            <b-col>
                                 <input class="inputPoint" placeholder="Точка А" id="pointA">
                             </b-col>
                         </b-row>
@@ -37,22 +50,6 @@
                         <b-row>
                             <b-col>
                                 <input class="inputPoint" placeholder="Точка B" id="pointA">
-                            </b-col>
-                        </b-row>
-
-                        <b-row>
-                            <b-col>
-                                <div class="lineDone">
-                                    <img src="./assets/doneLine.svg" class="imgLine"> Готовые маршруты
-                                </div>
-                            </b-col>
-                        </b-row>
-
-                        <b-row>
-                            <b-col>
-                                <div class="lineBuild">
-                                    <img src="./assets/buildLine.svg" class="imgLine"> Cтроящиеся маршруты
-                                </div>
                             </b-col>
                         </b-row>
 
@@ -73,8 +70,11 @@
                         <b-row>
                             <b-col cols="6">
                                 <div class="map">
-                                    <div class="topMap">
-                                        <img src="./assets/map.svg">
+                                    <div class="topMap" v-show="miniMapIsShow1">
+                                        <iframe src="https://yandex.ru/map-widget/v1/-/CCTuV6O3"  width="420" height="262" allowfullscreen="true"></iframe>
+                                    </div>
+                                    <div class="topMap" v-show="!miniMapIsShow1">
+                                        <img src="./assets/map.svg" @click="miniMapIsShow1 = true">
                                     </div>
                                     <div class="bottomMap">
                                         <b-row>
@@ -85,12 +85,12 @@
                                                 <div class="placePoint">
                                                     <b-row class="rowFromPoint">
                                                         <b-col >
-                                                            Площадь Ленина
+                                                            Цирк
                                                         </b-col>
                                                     </b-row>
                                                     <b-row>
                                                         <b-col class="rowToPoint">
-                                                            Детский парк
+                                                            Дом. Кафе
                                                         </b-col>
                                                     </b-row>
                                                 </div>
@@ -112,8 +112,11 @@
                             </b-col>
                             <b-col cols="6">
                                 <div class="map">
-                                    <div class="topMap">
-                                        <img src="./assets/map.svg">
+                                    <div class="topMap" v-show="miniMapIsShow2">
+                                        <iframe src="https://yandex.ru/map-widget/v1/-/CCTufJ64"  width="420" height="262" allowfullscreen="true"></iframe>
+                                    </div>
+                                    <div class="topMap" v-show="!miniMapIsShow2">
+                                        <img src="./assets/map.svg" @click="miniMapIsShow2 = true">
                                     </div>
                                     <div class="bottomMap">
                                         <b-row>
@@ -124,12 +127,12 @@
                                                 <div class="placePoint">
                                                     <b-row class="rowFromPoint">
                                                         <b-col >
-                                                            Площадь Ленина
+                                                            Детский парк
                                                         </b-col>
                                                     </b-row>
                                                     <b-row>
                                                         <b-col class="rowToPoint">
-                                                            Детский парк
+                                                            Кумысная поляна
                                                         </b-col>
                                                     </b-row>
                                                 </div>
@@ -153,8 +156,12 @@
                         <b-row>
                             <b-col cols="6">
                                 <div class="mapDown">
-                                    <div class="topMap">
-                                        <img src="./assets/map.svg">
+
+                                    <div class="topMap" v-show="miniMapIsShow3">
+                                        <iframe src="https://yandex.ru/map-widget/v1/-/CCTu7K5o" width="420" height="262" allowfullscreen="true"></iframe>
+                                    </div>
+                                    <div class="topMap" v-show="!miniMapIsShow3">
+                                        <img src="./assets/map.svg" @click="miniMapIsShow3 = true">
                                     </div>
                                     <div class="bottomMap">
                                         <b-row>
@@ -165,12 +172,12 @@
                                                 <div class="placePoint">
                                                     <b-row class="rowFromPoint">
                                                         <b-col >
-                                                            Площадь Ленина
+                                                            Аткарская улица
                                                         </b-col>
                                                     </b-row>
                                                     <b-row>
                                                         <b-col class="rowToPoint">
-                                                            Детский парк
+                                                            Вознесенская улица
                                                         </b-col>
                                                     </b-row>
                                                 </div>
@@ -192,8 +199,12 @@
                             </b-col>
                             <b-col cols="6">
                                 <div class="mapDown">
-                                    <div class="topMap">
-                                        <img src="./assets/map.svg" >
+
+                                    <div class="topMap" v-show="miniMapIsShow4">
+                                        <iframe src="https://yandex.ru/map-widget/v1/-/CCTyEZ5d"  width="420" height="262" allowfullscreen="true"></iframe>
+                                    </div>
+                                    <div class="topMap" v-show="!miniMapIsShow4">
+                                        <img src="./assets/map.svg" @click="miniMapIsShow4 = true">
                                     </div>
                                     <div class="bottomMap">
                                         <b-row>
@@ -204,13 +215,11 @@
                                                 <div class="placePoint">
                                                     <b-row class="rowFromPoint">
                                                         <b-col >
-                                                            Площадь Ленина
-                                                        </b-col>
+                                                            2-й Станционный проезд                                                        </b-col>
                                                     </b-row>
                                                     <b-row>
                                                         <b-col class="rowToPoint">
-                                                            Детский парк
-                                                        </b-col>
+                                                            Астраханская улица                                                        </b-col>
                                                     </b-row>
                                                 </div>
 
@@ -269,7 +278,11 @@
                 coords: [51.534907, 46.035188],
                 like: false,
                 likePath: './assets/like.svg',
-                mapIsShow: false
+                mapIsShow: false,
+                miniMapIsShow1: false,
+                miniMapIsShow2: false,
+                miniMapIsShow3: false,
+                miniMapIsShow4: false
             };
         },
         methods: {
@@ -286,6 +299,9 @@
             hideModalandShowMap () {
                 this.$refs['vote'].hide()
                 this.mapIsShow = true;
+            },
+            showMiniMap() {
+                this.miniMapIsShow = true;
             }
         }
     }
@@ -308,7 +324,7 @@
         width: 100%;
         height: 100%;
         background-color: #F5F6F7;
-
+        margin-left: 0px;
     }
 
     .ymap-container {
@@ -558,7 +574,8 @@
         outline: none !important;
     }
     .YandexMap {
-        margin-left: -430px;
+        margin-left: -350pt;
+        border-radius: 6px;
     }
     .voteWindow {
         width: 420px;
