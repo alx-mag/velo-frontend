@@ -23,7 +23,8 @@
                     var map = new ymaps.Map('YMapsID', {
                             center: [51.53360977972205, 46.01979527258292],
                             controls: ['zoomControl', 'typeSelector',  'fullscreenControl'],
-                            zoom: 13, type: 'yandex#map'
+                            zoom: 13, type: 'yandex#map',
+
                         }),
 
                         buttons = {
@@ -86,7 +87,9 @@
                             1.0: 'rgba(128, 255, 0, 1)'
                         }],
                         radiuses = [5, 10, 20, 30],
+
                         opacities = [0.4, 0.6, 0.8, 1];
+
 
                     ymaps.modules.require(['Heatmap'], function (Heatmap) {
                         var heatmap = new Heatmap(data, {
@@ -140,10 +143,6 @@
 </script>
 
 <style scoped>
-#map {
-    width: 1000px;
-    height: 600px;
-}
 
 .ymap-container {
     height: 100%;
@@ -151,14 +150,14 @@
 
 .hero-unit {
     min-height: 100%;
-    height: 100%;
+    height: 900px;
     margin: 0px;
 }
 #YMapsID {
-    width: 1000px;
-    height: 600px;
+    width: 1400px;
+    height: 900px;
 }
 #YMapsCode {
-    width: 880px;
+    width: 1400px;
 }
 </style>

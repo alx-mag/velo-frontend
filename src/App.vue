@@ -66,7 +66,10 @@
                     </div>
                 </b-col>
                 <b-col cols="8">
-                    <div class="block">
+                    <div class="YandexMap" v-show="mapIsShow">
+                        <Map/>
+                    </div>
+                    <div class="block" v-show="!mapIsShow">
                         <b-row>
                             <b-col cols="6">
                                 <div class="map">
@@ -243,7 +246,7 @@
                     <div class="subTitleVote">
                         Вы можете посмотреть предложения всех пользователей
                     </div>
-                    <b-button class="openMap" @click="hideModal">
+                    <b-button class="openMap" @click="hideModalandShowMap">
                         Открыть карту
                     </b-button>
                 </div>
@@ -265,9 +268,9 @@
             return {
                 coords: [51.534907, 46.035188],
                 like: false,
-                likePath: './assets/like.svg'
+                likePath: './assets/like.svg',
+                mapIsShow: false
             };
-
         },
         methods: {
             likeIt()
@@ -279,9 +282,11 @@
             },
             hideModal() {
                 this.$refs['vote'].hide()
-                let input = $(div).find("input[type='file']");
-                input.replaceWith(input.val('').clone(true));
             },
+            hideModalandShowMap () {
+                this.$refs['vote'].hide()
+                this.mapIsShow = true;
+            }
         }
     }
 </script>
@@ -552,7 +557,9 @@
         border: none !important;
         outline: none !important;
     }
-
+    .YandexMap {
+        margin-left: -430px;
+    }
     .voteWindow {
         width: 420px;
         height: 348px;
