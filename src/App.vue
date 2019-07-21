@@ -19,7 +19,7 @@
                                 </b-button>
                             </b-col>
                         </b-row>
-                        <b-row >
+                        <b-row>
                             <b-col >
                                 <div class="description">
                                     Вы можете предложить адреса, которые хотели бы соеденить велодорожкой.
