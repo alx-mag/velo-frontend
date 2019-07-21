@@ -11,16 +11,19 @@
 <script>
     export default {
         name: "Map",
-        props: {
-            coords: Array
+        // props: {
+        //     coords: Array
+        // },
+        created() {
+          this.showMap()
         },
         methods: {
             showMap() {
                 ymaps.ready(function () {
                     var map = new ymaps.Map('YMapsID', {
-                            center: [37.774546, -122.433523],
+                            center: [51.53360977972205, 46.01979527258292],
                             controls: ['zoomControl', 'typeSelector',  'fullscreenControl'],
-                            zoom: 12, type: 'yandex#satellite'
+                            zoom: 13, type: 'yandex#map'
                         }),
 
                         buttons = {
@@ -146,14 +149,14 @@
     height: 100%;
 }
 
-html, body, .hero-unit {
+.hero-unit {
     min-height: 100%;
     height: 100%;
     margin: 0px;
 }
 #YMapsID {
-    width: 900px;
-    height: 500px;
+    width: 1000px;
+    height: 600px;
 }
 #YMapsCode {
     width: 880px;
